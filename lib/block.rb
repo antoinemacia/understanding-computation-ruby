@@ -12,6 +12,12 @@ class Block < Struct.new(:expression)
   end
 
   def reduce(environment)
-    Proc.new { expression.reducible? ? expression.reduce(environment) : expression }.call
+    [ScopeGate.new(proc { expression }.call, scope), environment]
+  end
+
+  private
+
+  def scope
+    object_id.to_s.to_sym
   end
 end

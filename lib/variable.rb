@@ -14,4 +14,10 @@ class Variable < Struct.new(:name)
   def reduce(environment)
     environment[name]
   end
+
+  private
+
+  def current_scope(environment)
+    Array(environment[:scope_list]).first
+  end
 end

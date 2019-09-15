@@ -9,6 +9,6 @@ class Machine < Struct.new(:statement, :environment)
       step
     end
 
-    puts "#{statement} #{environment}"
+    [statement, environment]
   end
 end
