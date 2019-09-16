@@ -1,13 +1,6 @@
 # magic_ball.rb
 require "./test/test_helper.rb"
-require './lib/machine'
-require './lib/block'
-require './lib/assign'
-require './lib/variable'
-require './lib/number'
-require './lib/do_nothing'
-require './lib/scope_gate'
-require 'byebug'
+
 class MachineTest < Minitest::Test
 
   def test_assignment_of_variable_in_parent_scope_works

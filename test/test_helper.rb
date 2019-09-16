@@ -1,3 +1,3 @@
-$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-
+Dir[File.join('./lib', '*.rb')].each { |file| require file }
+require 'byebug'
 require "minitest/autorun"
